@@ -16,7 +16,7 @@ function randomSquare(){
 }
 
 square.forEach(id => {
-  id.addEventListener('mouseup',() =>{
+  id.addEventListener('click',() =>{
     if(id.id === hitPosition){
       result += 1
       score.textContent = result
@@ -29,8 +29,6 @@ function moveMole(){
   timerID = setInterval(randomSquare, 1000)
 }
 
-moveMole()
-
 function countDown(){
   currentTime--
   timeLeft.textContent = currentTime
@@ -39,4 +37,6 @@ function countDown(){
     alert("Game over! Final score: "+result)
   }
 }
+
+moveMole()
 let timerID = setInterval(countDown, 1000)
